@@ -1,5 +1,9 @@
 Example of Onyxia custom services catalog
 
+# Helm repo addressable via the GitHub raw user content:
+
+https://raw.githubusercontent.com/ramongilmoreno/onyxia-datalab-test-2026-custom-service-catalog/refs/heads/main/index.yaml
+
 # Copilot instructions:
 
 > How to create a custom Onyxia Datalabs service?

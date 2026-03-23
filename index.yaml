@@ -1,0 +1,23 @@
+apiVersion: v1
+entries:
+  stata:
+  - apiVersion: v2
+    created: "2026-03-23T16:38:30.927753048+01:00"
+    dependencies:
+    - name: library-chart
+      repository: https://inseefrlab.github.io/helm-charts-interactive-services
+      version: 2.0.3
+    description: An Stata Onyxia sample
+    digest: 63f9ce92111adc7bf61120878aec02325173e8795a1a9be89b86aa8a30a34b19
+    home: https://www.stata.com/
+    icon: https://www.stata.com/includes/images/stata-logo-blue.svg
+    keywords:
+    - Stata
+    name: stata
+    sources:
+    - https://github.com/ramongilmoreno/onyxia-datalab-test-2026-custom-service-catalog
+    type: application
+    urls:
+    - https://raw.githubusercontent.com/ramongilmoreno/onyxia-datalab-test-2026-custom-service-catalog/refs/heads/main/stata-1.0.0.tgz
+    version: 1.0.0
+generated: "2026-03-23T16:38:30.925545796+01:00"
