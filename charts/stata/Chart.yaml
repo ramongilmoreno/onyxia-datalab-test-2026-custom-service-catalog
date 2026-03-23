@@ -1,0 +1,24 @@
+#
+# Inspired by:
+#
+#   https://github.com/InseeFrLab/helm-charts-interactive-services/blob/main/charts/rstudio/Chart.yaml
+#
+apiVersion: v2
+name: stata
+description: An Stata Onyxia sample
+icon: https://www.stata.com/includes/images/stata-logo-blue.svg
+keywords:
+  - Stata
+home: https://www.stata.com/
+sources:
+  - https://github.com/ramongilmoreno/onyxia-datalab-test-2026-custom-service-catalog
+type: application
+# This is the chart version. This version number should be incremented each time you make changes
+# to the chart and its templates, including the app version.
+# Versions are expected to follow Semantic Versioning (https://semver.org/)
+version: 1.0.0
+dependencies:
+  - name: library-chart
+    version: 2.0.3
+    repository: https://inseefrlab.github.io/helm-charts-interactive-services
+

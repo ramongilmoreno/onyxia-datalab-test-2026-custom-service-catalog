@@ -1,0 +1,51 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "properties": {
+        "autoscaling": {
+            "type": "object",
+            "properties": {
+                "enabled": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "ingress": {
+            "type": "object",
+            "properties": {
+                "enabled": {
+                    "type": "boolean"
+                },
+                "hostname": {
+                    "type": "string"
+                }
+            }
+        },
+        "networking": {
+            "type": "object",
+            "properties": {
+                "service": {
+                    "type": "object",
+                    "properties": {
+                        "port": {
+                            "type": "integer"
+                        }
+                    }
+                }
+            }
+        },
+        "resources": {
+            "type": "object",
+            "properties": {
+                "requests": {
+                    "type": "object",
+                    "properties": {
+                        "memory": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

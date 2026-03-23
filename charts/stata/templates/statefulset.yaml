@@ -1,0 +1,36 @@
+# https://github.com/InseeFrLab/helm-charts-interactive-services/blob/main/charts/rstudio/templates/statefulset.yaml
+{{- $fullName := include "library-chart.fullname" . -}}
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: {{ include "library-chart.fullname" . }}
+  labels:
+    {{- include "library-chart.labels" . | nindent 4 }}
+spec:
+  serviceName: {{ include "library-chart.fullname" . }}
+  selector:
+    matchLabels:
+      {{- include "library-chart.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        {{- include "library-chart.selectorLabels" . | nindent 8 }}
+    spec:
+      subdomain: {{ include "library-chart.fullname" . }}
+      hostname: stata
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "stata"
+          imagePullPolicy: "IfNotPresent"
+          livenessProbe:
+            httpGet:
+              path: /
+              port: {{ .Values.networking.service.port }}
+            timeoutSeconds: 2
+            failureThreshold: 6
+          readinessProbe:
+            httpGet:
+              path: /
+              port: {{ .Values.networking.service.port }}
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}

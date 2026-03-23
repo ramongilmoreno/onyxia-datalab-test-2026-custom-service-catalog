@@ -1,0 +1,15 @@
+resources:
+  requests:
+    memory: "512Mi"
+
+autoscaling:
+  enabled: false
+
+ingress:
+  enabled: true
+  hostname: "" # Let onyxia inject default or user-provided hostname
+
+networking:
+  service:
+    # https://accetto.github.io/user-guide-g3/quick-start/
+    port: 6901
